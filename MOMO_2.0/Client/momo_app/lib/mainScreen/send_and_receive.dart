@@ -21,7 +21,7 @@ class SendOrReceive extends StatefulWidget {
 
 class _SendOrReceiveState extends State<SendOrReceive> {
   bool isSendPressed = false;
-  bool isReceivePressed = false;
+  bool isReceivePressed = true;
 
   @override
   Widget build(BuildContext context) {

@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   provider: ^6.0.5
   flutter_svg: ^2.0.7
+  lottie: ^2.6.0
 
 dev_dependencies:
   flutter_test:
@@ -77,11 +78,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-
+    
   fonts:
     - family: MTNBrighterSans
       fonts:
-        - asset: fonts/MTN_Brighter_Sans_Regular.ttf
+        - asset: fonts/MTN_Brighter Sans_Regular.ttf
           weight: 400
         - asset: fonts/MTN_Brighter_Sans_Light.ttf
           weight: 100
