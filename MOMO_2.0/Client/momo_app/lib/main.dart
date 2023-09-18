@@ -156,7 +156,7 @@ class _BottomAIWidgetState extends State<BottomAIWidget> {
                     isClosed ? 0 : MediaQuery.of(context).size.height * 0.85,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(width: 3, color: Colors.amber)),
+                    border: Border.all(width: 2, color: Colors.amber)),
               ),
             ),
           )
