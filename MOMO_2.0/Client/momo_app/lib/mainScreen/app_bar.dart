@@ -40,14 +40,14 @@ class CircularContainerWithSVG extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 60,
-      height: 60,
+      width: 50,
+      height: 50,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.amber.shade200,
+        border: Border.all(color: Colors.black, width: 2),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(10),
         child: Center(
           child: contentType == ContainerContentType.svg
               ? SvgPicture.asset(

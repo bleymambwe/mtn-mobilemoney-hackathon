@@ -7,6 +7,7 @@ import 'package:lottie/lottie.dart';
 import 'mainScreen/app_bar.dart';
 import 'mainScreen/name_and_profile.dart';
 import 'mainScreen/send_and_receive.dart';
+import 'mainScreen/send_via_qr.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,7 +47,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.all(8.0),
       child: Stack(
         // alignment: Alignement.cent,
@@ -63,6 +64,10 @@ class _HomeState extends State<Home> {
                 height: 15,
               ),
               SendAndReceive(),
+              SizedBox(
+                height: 15,
+              ),
+              SendViaQR(),
             ],
           ),
           Align(alignment: Alignment.bottomCenter, child: BottomAIWidget())
@@ -74,7 +79,6 @@ class _HomeState extends State<Home> {
 
 class BottomAIWidget extends StatefulWidget {
   //init
-
   const BottomAIWidget({
     Key? key,
   }) : super(key: key);
@@ -88,7 +92,7 @@ class _BottomAIWidgetState extends State<BottomAIWidget> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(seconds: 1),
+      duration: const Duration(seconds: 1),
       decoration: BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.only(
@@ -125,7 +129,7 @@ class _BottomAIWidgetState extends State<BottomAIWidget> {
                     //   height: 55,
                     //   fit: BoxFit.fill,
                     // ),
-                    Text(
+                    const Text(
                       'MoMo AI ',
                       style: TextStyle(
                           fontFamily: mainFont,

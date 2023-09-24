@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:momo_app/theme.dart';
 
 class NameAndProfile extends StatelessWidget {
@@ -42,7 +41,7 @@ class NameAndProfile extends StatelessWidget {
               Text(
                 'Mulenga',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: secondaryFontSize,
                   fontFamily: mainFont,
                   fontWeight: boldFont,
                 ),
