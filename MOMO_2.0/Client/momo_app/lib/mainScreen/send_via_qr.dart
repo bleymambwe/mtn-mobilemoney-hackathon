@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:momo_app/providerLogic/provider_logic.dart';
 import 'package:momo_app/theme.dart';
+import 'package:provider/provider.dart';
 
 class SendViaQR extends StatelessWidget {
   const SendViaQR({super.key});
@@ -60,16 +62,22 @@ class QR_NFC_Widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final sendReceiveProvider = Provider.of<SendReceiveProvider>(context);
+    bool isSendPressed = sendReceiveProvider.isSendPressed;
+    bool isReceivePressed = sendReceiveProvider.isReceivePressed;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          'Receive via',
-          style: TextStyle(
-            fontSize: 20,
-            fontFamily: mainFont, // Use the font family name
-            fontWeight: mediumFont,
+        Consumer<SendReceiveProvider>(
+          builder: (context, SendReceiveProvider, child) => Text(
+            isSendPressed ? ' Send via' : 'Receive via',
+            style: TextStyle(
+              fontSize: 20,
+              fontFamily: mainFont, // Use the font family name
+              fontWeight: mediumFont,
+            ),
           ),
         ),
         Row(
