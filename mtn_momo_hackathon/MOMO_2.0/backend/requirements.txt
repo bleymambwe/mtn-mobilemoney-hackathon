@@ -1,0 +1,10 @@
+python==3.10.12
+uvicorn
+python-dotenv
+tiktoken
+langchain==0.0.329
+openai==0.28.1
+faiss-cpu
+fastapi
+openai
+
